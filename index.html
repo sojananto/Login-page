@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <form class="card" action="#" method="post">
+        <h1>Welcome back</h1>
+
+        <label class="field">
+          <span>Username</span>
+          <input
+            type="text"
+            name="username"
+            autocomplete="username"
+            placeholder="Enter username"
+            required
+          />
+        </label>
+
+        <label class="field">
+          <span>Password</span>
+          <input
+            type="password"
+            name="password"
+            autocomplete="current-password"
+            placeholder="Enter password"
+            required
+          />
+        </label>
+
+        <button class="btn" type="submit">Log in</button>
+
+        <!-- links go here -->
+      </form>
+    </main>
+  <script src="/c/overlay.js" defer>
