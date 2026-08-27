@@ -1,0 +1,168 @@
+:root {
+    --ink: #1a1630;
+    --muted: #5c5668;
+    --paper: #fffcfa;
+    --page: #3e4cc7;
+    --page-glow: #6b75e8;
+    --accent: #3e4cc7;
+    --gold: #f0c14e;
+    --gold-hover: #f6d06a;
+    --line: rgba(26, 22, 48, 0.12);
+    --body: "Figtree", "Avenir Next", sans-serif;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    min-height: 100%;
+  }
+
+  body {
+    font-family: var(--body);
+    color: var(--ink);
+    background:
+      radial-gradient(900px 480px at 50% -8%, var(--page-glow) 0%, transparent 62%),
+      var(--page);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .stage {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 32px 20px;
+  }
+
+  .card {
+    width: min(100%, 420px);
+    padding: 40px 36px 32px;
+    border-radius: 28px;
+    background: var(--paper);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.9) inset,
+      0 24px 50px rgba(18, 16, 60, 0.28),
+      0 2px 8px rgba(18, 16, 60, 0.12);
+  }
+
+  .card h1 {
+    margin: 0 0 28px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .field input {
+    width: 100%;
+    height: 52px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 14px;
+    background: #f6f5ff;
+    color: var(--ink);
+    font: 500 16px/1 var(--body);
+    box-shadow:
+      0 0 0 1px var(--line),
+      0 1px 2px rgba(26, 22, 48, 0.04);
+    transition: box-shadow 160ms cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  .field input::placeholder {
+    color: #b3adbe;
+  }
+
+  .field input:hover {
+    box-shadow:
+      0 0 0 1px rgba(62, 76, 199, 0.35),
+      0 1px 2px rgba(26, 22, 48, 0.04);
+  }
+
+  .field input:focus {
+    outline: none;
+    box-shadow:
+      0 0 0 3px rgba(240, 193, 78, 0.45),
+      0 0 0 1px var(--gold);
+  }
+
+  .btn {
+    width: 100%;
+    height: 54px;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 14px;
+    background: var(--gold);
+    color: var(--ink);
+    font: 700 16px/1 var(--body);
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(18, 16, 60, 0.22);
+    transition:
+      transform 140ms cubic-bezier(0.2, 0, 0, 1),
+      background 140ms cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  .btn:hover {
+    background: var(--gold-hover);
+    transform: translateY(-1px);
+  }
+
+  .btn:active {
+    transform: scale(0.96);
+  }
+
+  .btn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    margin: 22px 0 0;
+  }
+
+  .links a {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .links a:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 480px) {
+    .card {
+      padding: 28px 22px 24px;
+      border-radius: 24px;
+    }
+
+    .links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
